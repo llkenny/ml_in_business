@@ -7,7 +7,7 @@ dill._dill._reverse_typemap['ClassType'] = type
 
 app = Flask(__name__)
 
-with open('source/model/pipeline.dill', 'rb') as f:
+with open('app/model/pipeline.dill', 'rb') as f:
 		model = dill.load(f)
 
 @app.route("/predict", methods=["POST"])
